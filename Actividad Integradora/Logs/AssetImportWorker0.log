@@ -1,0 +1,278 @@
+Unity Editor version:    2021.3.12f1 (8af3c3e441b1)
+Branch:                  2021.3/release
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 13.0 (Build 22A380)
+Darwin version:          22.1.0
+Architecture:            x86_64
+Running under Rosetta:   NO
+Available memory:        16384 MB
+Using pre-set license
+Pro License: YES
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2021.3.12f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+/Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+50998
+Successfully changed project path to: /Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora
+/Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 110.68 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.12f1 (8af3c3e441b1)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.3.12f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Color LCD preferred device: AMD Radeon Pro 5300M (high power)
+Metal devices available: 2
+0: AMD Radeon Pro 5300M (high power)
+1: Intel(R) UHD Graphics 630 (low power)
+Using device AMD Radeon Pro 5300M (high power)
+Initializing Metal device caps: AMD Radeon Pro 5300M
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2021.3.12f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2021.3.12f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/2021.3.12f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56392
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.12f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.12f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.12f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004956 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 95.77 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.849 seconds
+Domain Reload Profiling:
+	ReloadAssembly (849ms)
+		BeginReloadAssembly (134ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (581ms)
+			LoadAssemblies (136ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (126ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (40ms)
+			SetupLoadedEditorAssemblies (360ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (96ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (200ms)
+				ProcessInitializeOnLoadMethodAttributes (54ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.012307 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.138 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1139ms)
+		BeginReloadAssembly (97ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (921ms)
+			LoadAssemblies (104ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (302ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (64ms)
+			SetupLoadedEditorAssemblies (400ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (81ms)
+				ProcessInitializeOnLoadAttributes (277ms)
+				ProcessInitializeOnLoadMethodAttributes (33ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launching external process: /Applications/Unity/Hub/Editor/2021.3.12f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.08 seconds
+Refreshing native plugins compatible for Editor in 0.57 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3386 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (84.8 KB). Loaded Objects now: 3843.
+Memory consumption went from 97.0 MB to 96.9 MB.
+Total: 4.878469 ms (FindLiveObjects: 0.277931 ms CreateObjectMapping: 0.323612 ms MarkObjects: 4.095304 ms  DeleteObjects: 0.180460 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 131797.199077 seconds.
+  path: Assets/SciFi Warehouse Kit
+  artifactKey: Guid(140e6b60494104994a72accb2f015a5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SciFi Warehouse Kit using Guid(140e6b60494104994a72accb2f015a5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02d4cdb1eb87446563d9aeab6590b0c0') in 0.008207 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000114 seconds.
+  path: Assets/SciFi Warehouse Kit/Art
+  artifactKey: Guid(19c6023cbbdf2644d9e2fb183f3b63ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SciFi Warehouse Kit/Art using Guid(19c6023cbbdf2644d9e2fb183f3b63ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a88dc33e43502554e854e153f5e0d087') in 0.000937 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000085 seconds.
+  path: Assets/SciFi Warehouse Kit/Art/Materials/Shelf Trans Mat.mat
+  artifactKey: Guid(b95048f5a5f84304d96d6f5e61414ed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SciFi Warehouse Kit/Art/Materials/Shelf Trans Mat.mat using Guid(b95048f5a5f84304d96d6f5e61414ed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06e0aa8d057fb30cf962774048984945') in 1.074079 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000100 seconds.
+  path: Assets/SciFi Warehouse Kit/Art/Materials/Structure Trans Mat.mat
+  artifactKey: Guid(8daecc76e81cf114c9854e9ee5a2526a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SciFi Warehouse Kit/Art/Materials/Structure Trans Mat.mat using Guid(8daecc76e81cf114c9854e9ee5a2526a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ad5741ff094c746982cbeea7205c844') in 0.563680 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000124 seconds.
+  path: Assets/SciFi Warehouse Kit/Art/Materials/Walls Alpha.mat
+  artifactKey: Guid(9105cf4bbc4fb31479e2afe3138479a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SciFi Warehouse Kit/Art/Materials/Walls Alpha.mat using Guid(9105cf4bbc4fb31479e2afe3138479a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '642b246fe01022524d8be94239e2019a') in 0.043673 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/SciFi Warehouse Kit/Art/Materials/Walls.mat
+  artifactKey: Guid(d893f707bc253a84aa1e7d87361c830a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SciFi Warehouse Kit/Art/Materials/Walls.mat using Guid(d893f707bc253a84aa1e7d87361c830a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1de3bd58753f8fc78707d058498e3d07') in 0.410365 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/SciFi Warehouse Kit/Art/Materials/Ceiling Mat.mat
+  artifactKey: Guid(03f6be1764ac1eb4782330625ff6e188) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SciFi Warehouse Kit/Art/Materials/Ceiling Mat.mat using Guid(03f6be1764ac1eb4782330625ff6e188) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dece4354841eee53dde23d1993bb1c79') in 0.031048 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/SciFi Warehouse Kit/Art/Materials/Dune Skybox.mat
+  artifactKey: Guid(a84eefbbeb2520d429b34ca8ea6b235f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SciFi Warehouse Kit/Art/Materials/Dune Skybox.mat using Guid(a84eefbbeb2520d429b34ca8ea6b235f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85977b4641f51b75e8caf82a2b4f003d') in 0.538228 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000083 seconds.
+  path: Assets/SciFi Warehouse Kit/Art/Materials/Crate Long Mat.mat
+  artifactKey: Guid(56398f210688660468158fcbde7b8bfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SciFi Warehouse Kit/Art/Materials/Crate Long Mat.mat using Guid(56398f210688660468158fcbde7b8bfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c9e1b811ff6c477574bfd75f7b36f52') in 0.037798 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/SciFi Warehouse Kit/Art/Materials/Stairs Trans Mat.mat
+  artifactKey: Guid(1df9dc61ea6b6c849b9e221d26f156bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SciFi Warehouse Kit/Art/Materials/Stairs Trans Mat.mat using Guid(1df9dc61ea6b6c849b9e221d26f156bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16d28e333fffb8262ac96a0d2fd71646') in 0.028063 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000099 seconds.
+  path: Assets/SciFi Warehouse Kit/Art/Materials/Light Mat.mat
+  artifactKey: Guid(bc9fc69a1c4243343bff25dd7532a1b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SciFi Warehouse Kit/Art/Materials/Light Mat.mat using Guid(bc9fc69a1c4243343bff25dd7532a1b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c54c608cf9c45380b4a8e6510f738cd') in 0.303913 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000093 seconds.
+  path: Assets/SciFi Warehouse Kit/Art/Materials/Structure Mat.mat
+  artifactKey: Guid(8ff1df6862ae9684eb34810df64bc115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SciFi Warehouse Kit/Art/Materials/Structure Mat.mat using Guid(8ff1df6862ae9684eb34810df64bc115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0573a91ff18b9fb244ef33fcf338030') in 0.034552 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000089 seconds.
+  path: Assets/SciFi Warehouse Kit/Art/Materials/Windows.mat
+  artifactKey: Guid(eb79ec0657b7d6c48942befc5d7b2c37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SciFi Warehouse Kit/Art/Materials/Windows.mat using Guid(eb79ec0657b7d6c48942befc5d7b2c37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6afda132dd077691613ce5ec6e97cafa') in 0.030010 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000088 seconds.
+  path: Assets/SciFi Warehouse Kit/Art/Materials/Light Fixture Mat.mat
+  artifactKey: Guid(bb2d88d2112f74d4b8dfef23a4b5d31d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SciFi Warehouse Kit/Art/Materials/Light Fixture Mat.mat using Guid(bb2d88d2112f74d4b8dfef23a4b5d31d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c063c5e12e9e1926510582e2de261ff9') in 0.034806 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/SciFi Warehouse Kit/Art/Materials/Pallet Mat.mat
+  artifactKey: Guid(e2f46f807b3b19a4491e113702211cde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SciFi Warehouse Kit/Art/Materials/Pallet Mat.mat using Guid(e2f46f807b3b19a4491e113702211cde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63b68a05fecbac49bb845c80386af799') in 0.027788 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000082 seconds.
+  path: Assets/SciFi Warehouse Kit/Art/Materials/barrel_s.mat
+  artifactKey: Guid(61618e2271b3bdb47b5b4c628d9b092c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SciFi Warehouse Kit/Art/Materials/barrel_s.mat using Guid(61618e2271b3bdb47b5b4c628d9b092c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66dca299039d44d26f1c5fef035db870') in 0.138962 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.848683 seconds.
+  path: Assets/SciFi Warehouse Kit/Prefabs/Structures/Floor/Floor Tile 02.prefab
+  artifactKey: Guid(aae952dc76387e84287a598d901b120d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SciFi Warehouse Kit/Prefabs/Structures/Floor/Floor Tile 02.prefab using Guid(aae952dc76387e84287a598d901b120d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd71d5c0d765e0d6bcd359deee5ad23e') in 0.218969 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
