@@ -36,11 +36,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/SciFi Warehouse Kit/Demo/Scripts/PushPhysics.cs" />
-     <Compile Include="Assets/SciFi Warehouse Kit/Demo/Scripts/PlayRandomSound.cs" />
-     <Compile Include="Assets/SciFi Warehouse Kit/Demo/Scripts/MouseComponent.cs" />
-     <Compile Include="Assets/SciFi Warehouse Kit/Demo/Scripts/LightFlicker.cs" />
      <Compile Include="Assets/SciFi Warehouse Kit/Demo/Scripts/PlayerMovement.cs" />
+     <Compile Include="Assets/SciFi Warehouse Kit/Demo/Scripts/PushPhysics.cs" />
+     <Compile Include="Assets/SciFi Warehouse Kit/Demo/Scripts/MouseComponent.cs" />
+     <Compile Include="Assets/SciFi Warehouse Kit/Demo/Scripts/PlayRandomSound.cs" />
+     <Compile Include="Assets/SciFi Warehouse Kit/Demo/Scripts/LightFlicker.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/Applications/Unity/Hub/Editor/2021.3.12f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -695,11 +695,17 @@
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
         <HintPath>/Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ProBuilder.AddOns.Editor">
+        <HintPath>/Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder">
+        <HintPath>/Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
         <HintPath>/Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-        <HintPath>/Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
+    <Reference Include="Unity.ProBuilder.Editor">
+        <HintPath>/Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
         <HintPath>/Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
@@ -709,6 +715,12 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
         <HintPath>/Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Flow">
+        <HintPath>/Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProGrids.Editor">
+        <HintPath>/Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
         <HintPath>/Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
@@ -725,6 +737,9 @@
     <Reference Include="Unity.Services.Core.Analytics">
         <HintPath>/Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora/Library/ScriptAssemblies/Unity.Services.Core.Analytics.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
+        <HintPath>/Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
         <HintPath>/Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
     </Reference>
@@ -733,6 +748,9 @@
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
         <HintPath>/Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProGrids">
+        <HintPath>/Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
         <HintPath>/Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.dll</HintPath>

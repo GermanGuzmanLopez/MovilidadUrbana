@@ -1,0 +1,452 @@
+Unity Editor version:    2021.3.12f1 (8af3c3e441b1)
+Branch:                  2021.3/release
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 13.0 (Build 22A380)
+Darwin version:          22.1.0
+Architecture:            x86_64
+Running under Rosetta:   NO
+Available memory:        16384 MB
+Using pre-set license
+Pro License: YES
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2021.3.12f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+/Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+57757
+Successfully changed project path to: /Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora
+/Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 151.72 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.12f1 (8af3c3e441b1)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.3.12f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+C27R500 preferred device: AMD Radeon Pro 5300M (high power)
+Metal devices available: 2
+0: AMD Radeon Pro 5300M (high power)
+1: Intel(R) UHD Graphics 630 (low power)
+Using device AMD Radeon Pro 5300M (high power)
+Initializing Metal device caps: AMD Radeon Pro 5300M
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2021.3.12f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2021.3.12f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/2021.3.12f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56474
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.12f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.12f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.12f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002904 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 135.50 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.061 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1062ms)
+		BeginReloadAssembly (101ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (793ms)
+			LoadAssemblies (99ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (175ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (51ms)
+			SetupLoadedEditorAssemblies (493ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (136ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (276ms)
+				ProcessInitializeOnLoadMethodAttributes (67ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.006122 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/germanguzman/Documents/GitHub/MovilidadUrbana/Actividad Integradora/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.730 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1731ms)
+		BeginReloadAssembly (147ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (27ms)
+		EndReloadAssembly (1409ms)
+			LoadAssemblies (154ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (435ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (100ms)
+			SetupLoadedEditorAssemblies (642ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (134ms)
+				ProcessInitializeOnLoadAttributes (452ms)
+				ProcessInitializeOnLoadMethodAttributes (43ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launching external process: /Applications/Unity/Hub/Editor/2021.3.12f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.13 seconds
+Refreshing native plugins compatible for Editor in 0.83 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3791 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 30 unused Assets / (151.9 KB). Loaded Objects now: 4249.
+Memory consumption went from 113.8 MB to 113.7 MB.
+Total: 5.849072 ms (FindLiveObjects: 0.381206 ms CreateObjectMapping: 0.371431 ms MarkObjects: 4.823556 ms  DeleteObjects: 0.271320 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 258054.776364 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/Fire_Box.prefab
+  artifactKey: Guid(c931aa299ffc0d143af7d96fc74146cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/Fire_Box.prefab using Guid(c931aa299ffc0d143af7d96fc74146cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca0cfa7afa1f570de2878d12a63b8fce') in 0.370565 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000104 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/steel frame_1.prefab
+  artifactKey: Guid(ae0300bf9ffcc0d4fa7637c6db79854d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/steel frame_1.prefab using Guid(ae0300bf9ffcc0d4fa7637c6db79854d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6b77fa0f3d1d5f0d79a122a4d9fd1c7') in 0.012256 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000100 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/Clock.prefab
+  artifactKey: Guid(8225339ef2f7c384f96e9b250c28fa99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/Clock.prefab using Guid(8225339ef2f7c384f96e9b250c28fa99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04f999235af0fcde35b97074ddee9bca') in 0.012306 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000110 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/forklift2.prefab
+  artifactKey: Guid(18e0f95f2ff43bc45bf8cecb95c19681) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/forklift2.prefab using Guid(18e0f95f2ff43bc45bf8cecb95c19681) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c3b1b689c6e3116f43fa09f465bcd70') in 0.026915 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000089 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/Lighting.prefab
+  artifactKey: Guid(08b09df4b4beb8c4eb6993196bc4cc35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/Lighting.prefab using Guid(08b09df4b4beb8c4eb6993196bc4cc35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa8f8f7b0fec99710330c50d8e964c93') in 0.012645 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000102 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs
+  artifactKey: Guid(5d0df074966e7d745a664b1329f4d957) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs using Guid(5d0df074966e7d745a664b1329f4d957) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0958eb247d5cccf7490248b1c866c49f') in 0.000896 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000117 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/Sewage_Round.prefab
+  artifactKey: Guid(0b172831813763a4c972831ab6fc0173) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/Sewage_Round.prefab using Guid(0b172831813763a4c972831ab6fc0173) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b86c53b9f417204c7f48c475ad400de') in 0.012165 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000119 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/Power_box_long.prefab
+  artifactKey: Guid(ec22acc644beb57428f36778e173d26a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/Power_box_long.prefab using Guid(ec22acc644beb57428f36778e173d26a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7591f3064cc3b5f2b6cf0e7bc27d5a1b') in 0.013813 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000085 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/Kepenk duvar_3A_pencereli.prefab
+  artifactKey: Guid(5783d1266af3aea4a8b1deebe84f3776) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/Kepenk duvar_3A_pencereli.prefab using Guid(5783d1266af3aea4a8b1deebe84f3776) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83f2b665415cc84e5e4f618f099f0d76') in 0.017150 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000147 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/box6.prefab
+  artifactKey: Guid(2c9144eb7b63e9041a17f6b62c8d3e7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/box6.prefab using Guid(2c9144eb7b63e9041a17f6b62c8d3e7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '204384990f35e7b95334de13a0a26260') in 0.014273 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000109 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/box1.prefab
+  artifactKey: Guid(60f93470f9b71524ca1c7735b6730a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/box1.prefab using Guid(60f93470f9b71524ca1c7735b6730a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd466193d213e2e5caed973c893e5abc5') in 0.011625 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000084 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/hand_trolley.prefab
+  artifactKey: Guid(4eb63ab31bb4c3340a1ffffd366ee535) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/hand_trolley.prefab using Guid(4eb63ab31bb4c3340a1ffffd366ee535) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d8c036aec38cba4d45e02d95c0c4086') in 0.016916 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000086 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/etiket_6.prefab
+  artifactKey: Guid(d6d3352caf829e7428bffc8f59b5f490) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/etiket_6.prefab using Guid(d6d3352caf829e7428bffc8f59b5f490) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c9d024d4c4f2d21ee5634f598d457e8') in 0.011547 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000112 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/raf_6.prefab
+  artifactKey: Guid(565d2a3d194214647af4b6774eb95895) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/raf_6.prefab using Guid(565d2a3d194214647af4b6774eb95895) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c90b58c2c757c14c6ac13105ad692dc') in 0.013426 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/Power_box.prefab
+  artifactKey: Guid(d1b87b94fb313124493621d33f58a81e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/Power_box.prefab using Guid(d1b87b94fb313124493621d33f58a81e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db81c31e317b346bd0c0507ea26b1726') in 0.014318 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000135 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/box2.prefab
+  artifactKey: Guid(afc5c033230cd2d459247ec162692587) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/box2.prefab using Guid(afc5c033230cd2d459247ec162692587) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e460701184f86103933ca8d414fe6afd') in 0.012169 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000080 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/etiket_4.prefab
+  artifactKey: Guid(0268367472e38f3499a11dbe56ff258f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/etiket_4.prefab using Guid(0268367472e38f3499a11dbe56ff258f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5d18e9519e1edb813e314d9ded926c4') in 0.011951 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000083 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/conveyor_1.prefab
+  artifactKey: Guid(c6e49312f20f77e4685efecd25c99c9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/conveyor_1.prefab using Guid(c6e49312f20f77e4685efecd25c99c9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4634c31ff2dbb33e68438dcb4495e691') in 0.013089 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000078 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/conveyor_4.prefab
+  artifactKey: Guid(d382bfdc0b624c646bf7f58b29fe8cc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/conveyor_4.prefab using Guid(d382bfdc0b624c646bf7f58b29fe8cc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e393a3429e8fd5d0939a21c145d10bb') in 0.012585 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000122 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/Kepenk duvar_6B.prefab
+  artifactKey: Guid(f9bfe038f95da3e4ca99966162a9725f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/Kepenk duvar_6B.prefab using Guid(f9bfe038f95da3e4ca99966162a9725f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fffa8124a42deaf52188b18efed8aa01') in 0.012558 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000079 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/conveyor_XRay.prefab
+  artifactKey: Guid(1a3bc99c43432b74ca5542b8ab04a47a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/conveyor_XRay.prefab using Guid(1a3bc99c43432b74ca5542b8ab04a47a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c79d226a5eefdff9461a3d6fc1dce88a') in 0.012200 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000083 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/kasa.prefab
+  artifactKey: Guid(58fb1fc35bbaef74da1b1a1125c7c9e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/kasa.prefab using Guid(58fb1fc35bbaef74da1b1a1125c7c9e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7c60be746c8a8ea8ba87166166ef09c') in 0.012536 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000086 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/Kepenk duvar_1A_pencereli.prefab
+  artifactKey: Guid(34abe2cad4d146b4bb69352d9631486d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/Kepenk duvar_1A_pencereli.prefab using Guid(34abe2cad4d146b4bb69352d9631486d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc84d5ace5dbde8f3483acaa06bed3cd') in 0.017396 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000138 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/Sewage_Rectangle.prefab
+  artifactKey: Guid(b7b3afdb0269d9447a16b66baa476f02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/Sewage_Rectangle.prefab using Guid(b7b3afdb0269d9447a16b66baa476f02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '273a0bfa03299c130302e13f1dd3c258') in 0.011690 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000080 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/steel frame_3.prefab
+  artifactKey: Guid(de49c0e372814b44287d6f0fd435d8c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/steel frame_3.prefab using Guid(de49c0e372814b44287d6f0fd435d8c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a91cd18a27c35d6f9a69a23021d3f99') in 0.010836 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000123 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/Air_Duct.prefab
+  artifactKey: Guid(76c5637d226049d4cb65f0ef184cdee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/Air_Duct.prefab using Guid(76c5637d226049d4cb65f0ef184cdee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd3602b7eb19168fac58583ffcf1933f') in 0.015277 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000079 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/etiket_1.prefab
+  artifactKey: Guid(8afdcd7399efc144597e0d3230f5b583) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/etiket_1.prefab using Guid(8afdcd7399efc144597e0d3230f5b583) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0790ffee3a66718482656e24467270fd') in 0.012791 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/kasa1.prefab
+  artifactKey: Guid(381dc924859d9c14d99cfe05edf176be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/kasa1.prefab using Guid(381dc924859d9c14d99cfe05edf176be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '371d31cd203636bf4982ffc551f19a63') in 0.012958 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/Kepenk duvar_5A.prefab
+  artifactKey: Guid(e8da4901343c0774abdcd815db9e62f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/Kepenk duvar_5A.prefab using Guid(e8da4901343c0774abdcd815db9e62f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ad98d7cde026f75aecb10e216efca7a') in 0.014146 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000086 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/stairs.prefab
+  artifactKey: Guid(ba0832257e21eee49a3e8cebeb9af39b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/stairs.prefab using Guid(ba0832257e21eee49a3e8cebeb9af39b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51852ed53b6e32cb49df34fd3be0d5b0') in 0.011436 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000117 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/box3.prefab
+  artifactKey: Guid(890db50d4af712b4cac3057f6b211622) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/box3.prefab using Guid(890db50d4af712b4cac3057f6b211622) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb15f3713a55acdf801395942b779d08') in 0.013698 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000089 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/panel_trolley.prefab
+  artifactKey: Guid(dd78af65de83d5c46a38c39bc279e292) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/panel_trolley.prefab using Guid(dd78af65de83d5c46a38c39bc279e292) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25d8c16af97cf2bbaef23e102dcecb33') in 0.012931 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000105 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/etiket_5.prefab
+  artifactKey: Guid(b05af2af2ae92d94e9c70ede3b4119de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/etiket_5.prefab using Guid(b05af2af2ae92d94e9c70ede3b4119de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ee88cf1286f07543329b9757a8f528a') in 0.012121 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000122 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/Kepenk duvar_3B.prefab
+  artifactKey: Guid(ce48bb8d4bf36c54085cb8886a03bb45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/Kepenk duvar_3B.prefab using Guid(ce48bb8d4bf36c54085cb8886a03bb45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6558d1bffb852b612ca361094683543f') in 0.011868 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000111 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/Barrier.prefab
+  artifactKey: Guid(a09b5d565ca755545a59fee8ba9f8e30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/Barrier.prefab using Guid(a09b5d565ca755545a59fee8ba9f8e30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca7429914a9d45c59e7fe10e15c9c199') in 0.013957 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000157 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/conveyor_6.prefab
+  artifactKey: Guid(161122920ac188d48b576595384adab5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/conveyor_6.prefab using Guid(161122920ac188d48b576595384adab5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b86d926609c134b4f9043f447b292099') in 0.013367 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/cctv.prefab
+  artifactKey: Guid(cf1786895c64a9547aa51387ac2c1d40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/cctv.prefab using Guid(cf1786895c64a9547aa51387ac2c1d40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2154b00550f3c5362193bd6a7f513ded') in 0.109115 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000075 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/Kepenk duvar_4B.prefab
+  artifactKey: Guid(1c267aedfa36f7047b85969877a95703) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/Kepenk duvar_4B.prefab using Guid(1c267aedfa36f7047b85969877a95703) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90f38e9ff022086e2f58309109c76beb') in 0.013993 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000122 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/Closet.prefab
+  artifactKey: Guid(4a5b39d8cd6c5924ea313147fdb3b77c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/Closet.prefab using Guid(4a5b39d8cd6c5924ea313147fdb3b77c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '107fa4a2bdc1475d50d7758788fc7226') in 0.013855 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000087 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/conveyor_control.prefab
+  artifactKey: Guid(88108632578e0f34da41bc39d263478c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/conveyor_control.prefab using Guid(88108632578e0f34da41bc39d263478c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a20bc0aa9c01f9ac6a118ce64dd4aa28') in 0.014319 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.594074 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/uyari.prefab
+  artifactKey: Guid(2d08bc7f1833245449a22e01c5c1d98e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/uyari.prefab using Guid(2d08bc7f1833245449a22e01c5c1d98e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10eef958590bf37c53f239c87cc99dcd') in 0.011305 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000098 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/warning_light.prefab
+  artifactKey: Guid(7aba9df6690f28f4e99977aba4f7c0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/warning_light.prefab using Guid(7aba9df6690f28f4e99977aba4f7c0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55ec8ad131e442e9295022bfc191f2df') in 0.012753 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000070 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/Wall_door_emergency.prefab
+  artifactKey: Guid(7c15cb3172bd5304dbf1617158168cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/Wall_door_emergency.prefab using Guid(7c15cb3172bd5304dbf1617158168cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82b4fa5be44678b930404ff09895eaf1') in 0.011302 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000088 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/Yuksek_Zemin_rampa.prefab
+  artifactKey: Guid(1e68c1ab1a337a74dbd20079c8e36e0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/Yuksek_Zemin_rampa.prefab using Guid(1e68c1ab1a337a74dbd20079c8e36e0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e0f4d42ef1d61ee28001d079e9f0a88') in 0.012552 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000080 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/uyari1.prefab
+  artifactKey: Guid(501c7ec514be3b045bc455e660886790) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/uyari1.prefab using Guid(501c7ec514be3b045bc455e660886790) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8697477ea27392c47824c24b701569f4') in 0.010910 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/Megapoly.Art/Warehouse Pack/Prefabs/uyari2.prefab
+  artifactKey: Guid(d67a32696cc6a1845b4ae8d5c8a88068) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Megapoly.Art/Warehouse Pack/Prefabs/uyari2.prefab using Guid(d67a32696cc6a1845b4ae8d5c8a88068) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73daa99d55a829e6b3011d91dee4c077') in 0.010861 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting

@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/SciFi Warehouse Kit/Demo/Scene/SciFi_Warehouse.unity
+- path: Assets/Scenes/Almacen.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
