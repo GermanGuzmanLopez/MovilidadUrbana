@@ -5,6 +5,7 @@ class robot_model(mesa.Model):
     
     def __init__(self, n, k, width, height, max_step):
         self.num_agents = n
+        self.width = width
         self.grid = mesa.space.MultiGrid(width, height, False)
         self.schedule = mesa.time.RandomActivation(self)
         self.bschedule = mesa.time.BaseScheduler(self)
@@ -43,7 +44,12 @@ class robot_model(mesa.Model):
             self.bschedule.add(a)
             self.grid.place_agent(a, (x, y))
 
+            self.datacollector = mesa.DataCollector(
+                model_reporters = {"Boxes found and ready": len_cajas_listas}
+            )
+
     def step(self) -> None:
         self.running = (self.current_step < self.max_step)
         self.schedule.step()
+        self.datacollector.collect(self)
         self.current_step += 1

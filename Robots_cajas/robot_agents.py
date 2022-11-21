@@ -1,5 +1,12 @@
 import mesa
 
+def len_cajas_listas(model):
+    boxes_ready = 0
+    for i in range(model.width):
+        print(i)
+        boxes_ready += len(model.grid.get_cell_list_contents((i, 0)))
+    return boxes_ready
+
 class robots(mesa.Agent):
 
     def __init__(self, unique_id, model):
@@ -25,9 +32,6 @@ class robots(mesa.Agent):
                     continue
             occupied = self.model.grid.get_cell_list_contents((i))
             if len(occupied) > 0:
-                print("--------")
-                print("Reviso pos: " + str(i))
-                print("--------")
                 for j in occupied:
                     if(j in self.model.bschedule.agents):
                         if (j.taken):
@@ -36,9 +40,6 @@ class robots(mesa.Agent):
                         self.companion.model.grid.move_agent(self.companion, self.pos)
                         self.companion.taken = True
                         go = False
-                        print("--------")
-                        print("Agarro Caja" + str(i))
-                        print("--------")
                         self.encaminado = True
                         break
             if not go:
@@ -73,47 +74,29 @@ class robots(mesa.Agent):
 
                 if(not self.model.grid.out_of_bounds((self.pos[0] + 1, self.pos[1]))) \
                 and (len(self.model.grid.get_cell_list_contents((self.pos[0] + 1, self.pos[1]))) < 1):
-                    print("--------")
-                    print("Right end move")
-                    print("--------")
                     self.model.grid.move_agent(self, (self.pos[0] + 1, self.pos[1]))
 
                 elif(not self.model.grid.out_of_bounds((self.pos[0] - 1, self.pos[1]))) \
                 and (len(self.model.grid.get_cell_list_contents((self.pos[0] - 1, self.pos[1]))) < 1):
-                    print("--------")
-                    print("Left end move")
-                    print("--------")
                     self.trapped == "left"
                     self.model.grid.move_agent(self, (self.pos[0] - 1, self.pos[1]))
 
                 elif (len(self.model.grid.get_cell_list_contents((self.pos[0], self.pos[1] + 1))) < 0):
-                    print("--------")
-                    print("Up end move")
-                    print("--------")
                     self.model.grid.move_agent(self, (self.pos[0], self.pos[1] + 1))
 
             elif(self.trapped == "left"):
 
                 if(not self.model.grid.out_of_bounds((self.pos[0] - 1, self.pos[1]))) \
                 and (len(self.model.grid.get_cell_list_contents((self.pos[0] - 1, self.pos[1]))) < 1):
-                    print("--------")
-                    print("Left end move")
-                    print("--------")
                     self.trapped == "left"
                     self.model.grid.move_agent(self, (self.pos[0] - 1, self.pos[1]))
 
                 elif(not self.model.grid.out_of_bounds((self.pos[0] + 1, self.pos[1]))) \
                 and (len(self.model.grid.get_cell_list_contents((self.pos[0] + 1, self.pos[1]))) < 1):
-                    print("--------")
-                    print("Right end move")
-                    print("--------")
                     self.trapped == "right"
                     self.model.grid.move_agent(self, (self.pos[0] + 1, self.pos[1]))
 
                 elif (len(self.model.grid.get_cell_list_contents((self.pos[0], self.pos[1] + 1))) < 0):
-                    print("--------")
-                    print("Up end move")
-                    print("--------")
                     self.model.grid.move_agent(self, (self.pos[0], self.pos[1] + 1))
                 
 
@@ -178,18 +161,12 @@ class robots(mesa.Agent):
                             self.companion.model.grid.move_agent(self.companion, i)
                             self.companion.taken = False
                             self.companion = None
-                            print("--------")
-                            print("Dejo encima caja : " + str(i))
-                            print("--------")
                             break
             else:
                 if (self.companion != None):
                     self.companion.model.grid.move_agent(self.companion, i)
                     self.companion.taken = False
                     self.companion = None
-                    print("--------")
-                    print("Dejo caja vacio: " + str(i))
-                    print("--------")
                     break
 
 
@@ -199,9 +176,6 @@ class robots(mesa.Agent):
 
     # Priority of steps
     def step(self):
-        print("--------")
-        print("Yo: " + str(self.pos))
-        print("--------")
 
         if(self.companion == None):
             self.move()
@@ -221,7 +195,7 @@ class caja(mesa.Agent):
     def descansar(self):
         self.model.grid.move_agent(self, (self.pos[0], 0))
         self.taken = False
-        print("--------")
-        print("Dejo encima caja : " + str(self.pos))
-        print("Cajas apiladas: " + str(len(self.model.grid.get_cell_list_contents((self.pos)))))
-        print("--------")
+        # print("--------")
+        # print("Dejo encima caja : " + str(self.pos))
+        # print("Cajas apiladas: " + str(len(self.model.grid.get_cell_list_contents((self.pos)))))
+        # print("--------")

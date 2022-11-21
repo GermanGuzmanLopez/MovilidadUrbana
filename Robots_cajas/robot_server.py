@@ -19,11 +19,11 @@ def agent_portrayal(agent):
 
 grid = mesa.visualization.CanvasGrid(agent_portrayal, 10, 10, 500, 500)
 
-# chart = mesa.visualization.ChartModule([{"Label": "Dirt Percentage",
-#                       "Color": "Black"}],
-#                     data_collector_name = 'datacollector')
+chart = mesa.visualization.ChartModule([{"Label": "Boxes found and ready",
+                      "Color": "Black"}],
+                    data_collector_name = 'datacollector')
 
-server = mesa.visualization.ModularServer(robot_model, [grid], "Robot Model",
+server = mesa.visualization.ModularServer(robot_model, [grid, chart], "Robot Model",
     {"n": 5,
     "k": UserSettableParameter("slider", "num_cajas", value = 50, max_value = 50, min_value = 1), 
     "width":10, "height":10,  
