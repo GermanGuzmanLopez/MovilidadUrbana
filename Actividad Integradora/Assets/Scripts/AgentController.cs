@@ -99,7 +99,13 @@ public class AgentController : MonoBehaviour
                 Vector3 direction = currentPosition - interpolated;
 
                 agents[agent.Key].transform.localPosition = interpolated;
-                if(direction != Vector3.zero) agents[agent.Key].transform.rotation = Quaternion.LookRotation(direction);
+                if(direction != Vector3.zero)
+                {
+                    agents[agent.Key].transform.rotation = Quaternion.LookRotation(direction);
+
+                    //agents[agent.Key].transform.rotation = Quaternion.LookRotation(direction);
+                }
+                   
             }
             foreach (var box in currPositionsBoxes)
             {
@@ -168,8 +174,6 @@ public class AgentController : MonoBehaviour
             Debug.Log(www.error);
         else 
         {
-            Debug.Log(www.downloadHandler.text);
-            Debug.Log("---------------------------------");
             agentsData = JsonUtility.FromJson<AgentsData>(www.downloadHandler.text);
 
             foreach (AgentData agent in agentsData.positions)
@@ -205,8 +209,7 @@ public class AgentController : MonoBehaviour
         else 
         {
             obstacleData = JsonUtility.FromJson<AgentsData>(www.downloadHandler.text);
-
-            Debug.Log(obstacleData.positions);
+            /*Debug.Log(obstacleData.positions);*/
 
             foreach(AgentData obstacle in obstacleData.positions)
             {

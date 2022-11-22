@@ -41,7 +41,7 @@ def getAgents():
     if request.method == 'GET':
         agentPositions = []
         for i in randomModel.schedule.agents:
-            agentPositions.append({"id": str(i.unique_id), "x": i.pos[0]-5, "y": 1, "z": i.pos[1]-5})
+            agentPositions.append({"id": str(i.unique_id), "x": i.pos[0], "y": 1, "z": i.pos[1]})
         return jsonify({'positions':agentPositions})
 
 @app.route('/getObstacles', methods=['GET'])
@@ -51,7 +51,7 @@ def getObstacles():
     if request.method == 'GET':
         carPositions = []
         for i in randomModel.bschedule.agents:
-            carPositions.append({"id": str(i.unique_id), "x": i.pos[0]-5, "y": 1, "z": i.pos[1]-5})
+            carPositions.append({"id": str(i.unique_id), "x": i.pos[0], "y": 0.35, "z": i.pos[1]})
 
         return jsonify({'positions':carPositions})
 
