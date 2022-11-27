@@ -2,6 +2,7 @@ from agents import *
 from model import RandomModel
 from mesa.visualization.modules import CanvasGrid, BarChartModule
 from mesa.visualization.ModularVisualization import ModularServer
+import os
 
 def agent_portrayal(agent):
     if agent is None: return
@@ -43,7 +44,7 @@ def agent_portrayal(agent):
 width = 0
 height = 0
 
-with open('/Users/USER/code/python/MovilidadUrbana/BaseMap.txt') as baseFile:
+with open(os.getcwd() + "/BaseMap.txt") as baseFile:
     lines = baseFile.readlines()
     width = len(lines[0])-1
     height = len(lines)

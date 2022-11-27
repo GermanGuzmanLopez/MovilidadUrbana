@@ -2,6 +2,7 @@ import mesa
 from agents import *
 import json
 from random import choice
+import os
 
 class RandomModel(mesa.Model):
     """ 
@@ -11,12 +12,12 @@ class RandomModel(mesa.Model):
     """
     def __init__(self, N):
 
-        dataDictionary = json.load(open("/Users/USER/code/python/MovilidadUrbana/mapDictionary.json"))
+        dataDictionary = json.load(open(os.getcwd() + "/mapDictionary.json"))
 
         self.traffic_lights = []
         self.destinos = []
 
-        with open('/Users/USER/code/python/MovilidadUrbana/BaseMap.txt') as baseFile:
+        with open(os.getcwd() + "/BaseMap.txt") as baseFile:
             lines = baseFile.readlines()
             self.width = len(lines[0])-1
             self.height = len(lines)
@@ -26,6 +27,7 @@ class RandomModel(mesa.Model):
             self.schedule = mesa.time.RandomActivation(self)
             self.Tschedule = mesa.time.RandomActivation(self)
             self.Rschedule = mesa.time.BaseScheduler(self)
+            self.Eschedule = mesa.time.BaseScheduler(self)
 
             for r, row in enumerate(lines):
                 for c, col in enumerate(row):
@@ -42,7 +44,9 @@ class RandomModel(mesa.Model):
 
                     elif col == "#":
                         agent = Obstacle(f"ob_{r*self.width+c}", self)
+                        self.Eschedule.add(agent)
                         self.grid.place_agent(agent, (c, self.height - r - 1))
+
 
                     elif col == "D":
                         agent = Destination(f"d_{r*self.width+c}", self)
