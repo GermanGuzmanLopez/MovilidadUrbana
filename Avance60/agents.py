@@ -70,8 +70,12 @@ class Car(Agent):
         else: return False
 #################################################################
     def decidir(self):
+        go = True
+
         x = self.pos[0]
         y = self.pos[1]
+
+        print(str(x)+ "-" + str(y))
 
         print("Buffereado del smash: " + str(self.buffer))
 
@@ -84,69 +88,75 @@ class Car(Agent):
             occupied = self.model.grid.get_cell_list_contents((x + 1, y))
             for j in occupied:
                 if j in self.model.schedule.agents:
+                    go = False
                     break
                 elif j in self.model.Eschedule.agents:
                     self.buffer.clear()
-                    self.move() 
+                    go = False
+                    
                 elif j in self.model.Tschedule.agents:
                     print("Semaforo en: "+ str(j.state))
-                    if j.state:
-                        self.model.grid.move_agent(self, (x + 1, y))
-                        break                  
-                else:
-                    self.model.grid.move_agent(self, (x + 1, y))
-                    break
+                    if not j.state:
+                        go = False
+                        break
+                                          
+            
+            if go: self.model.grid.move_agent(self, (x + 1, y))
                 
         elif self.direction == "Left":
             occupied = self.model.grid.get_cell_list_contents((x - 1, y))
             for j in occupied:
                 if j in self.model.schedule.agents:
+                    go = False
                     break
                 elif j in self.model.Eschedule.agents:
                     self.buffer.clear()
-                    self.move()
+                    go = False
+                    
                 elif j in self.model.Tschedule.agents:
                     print("Semaforo en: "+ str(j.state))
-                    if j.state:
-                        self.model.grid.move_agent(self, (x - 1, y))
+                    if not j.state:
+                        go = False
                         break
-                else:
-                    self.model.grid.move_agent(self, (x - 1, y))
-                    break
+            
+            if go: self.model.grid.move_agent(self, (x - 1, y))
+
                 
         elif self.direction == "Up":
             occupied = self.model.grid.get_cell_list_contents((x, y + 1))
             for j in occupied:
                 if j in self.model.schedule.agents:
+                    go = False
                     break
                 elif j in self.model.Eschedule.agents:
                     self.buffer.clear()
-                    self.move()   
+                    go = False
                 elif j in self.model.Tschedule.agents:
                     print("Semaforo en: "+ str(j.state))
-                    if j.state:
-                        self.model.grid.move_agent(self, (x, y + 1))  
-                        break   
-                else:
-                    self.model.grid.move_agent(self, (x, y + 1))
-                    break
+                    if not j.state:
+                        go = False
+                        break  
+
+            if go: self.model.grid.move_agent(self, (x, y + 1))
+
 
         elif self.direction == "Down":
             occupied = self.model.grid.get_cell_list_contents((x, y - 1))
             for j in occupied:
                 if j in self.model.schedule.agents:
+                    go = False
                     break
                 elif j in self.model.Eschedule.agents:
                     self.buffer.clear()
-                    self.move()
+                    go = False
                 elif j in self.model.Tschedule.agents:
                     print("Semaforo en: "+ str(j.state))
-                    if j.state:
-                        self.model.grid.move_agent(self, (x, y - 1))
+                    if not j.state:
+                        go = False
                         break
-                else:
-                    self.model.grid.move_agent(self, (x, y - 1))
-                    break
+
+            if go: self.model.grid.move_agent(self, (x, y - 1))
+
 #################################################################
     def move(self):
         possible_steps = self.model.grid.get_neighborhood(
@@ -222,28 +232,16 @@ class Car(Agent):
         y = self.pos[1]
         
         if self.direction == "Right":
-            checate = [(x + i, y - i), (x  + i, y ), (x  + i, y  + i)]
+            checate = [(x + i, y - 2), (x + i, y - 1), (x + i, y), (x + i, y + 1), (x + i, y + 2)]
         elif self.direction == "Left":
-            checate = [(x - i, y - i), (x - i, y), (x - i, y + i)]
+            checate = [(x - i, y - 2), (x - i, y - 1), (x - i, y), (x - i, y + 1), (x - i, y + 2)]
         elif self.direction == "Up":
-            checate = [(x - i, y + i), (x , y + i), (x  + i, y  + i)]
+            checate = [(x - 2, y + i), (x - 1, y + i), (x, y + i), (x + 1, y + i), (x + 2, y + i)]
         elif self.direction == "Down":
-            checate = [(x - i, y - i), (x , y - i), (x + i, y - i)]
+            checate = [(x - 2, y - i), (x - 1, y - i), (x, y - i), (x + 1, y - i), (x + 2, y - i)]
 
         return checate
 #################################################################
-
-    # def get_direction(self, checate):
-    #     for i in checate:
-    #         if(not self.model.grid.out_of_bounds(i)):
-    #             occupied = self.model.grid.get_cell_list_contents(i)
-    #             for j in occupied:
-    #                 if j in self.model.Rschedule.agents:
-    #                     if(self.direction != j.direction):
-    #                         return j.direction
-                            
-    #         if(self.model.grid.out_of_bounds(i)):
-
     def get_direction(self, checate):
         for i in range(len(checate)):
             if(not self.model.grid.out_of_bounds(checate[i])):
@@ -251,14 +249,20 @@ class Car(Agent):
                 for j in occupied:
                     if j in self.model.Rschedule.agents:
                         if(self.direction != j.direction):
-                            return j.direction
-                            
-            if(self.model.grid.out_of_bounds(checate[i])):
-                if(i == 0):
-                    self.model.grid.move_agent(self, (checate[2][0], checate[2][1]))
-                elif(i == 2):
-                    self.model.grid.move_agent(self, (checate[0][0], checate[0][1]))
-#################################################################             
+                            if not ((self.direction == "Up") and (j.direction == "Down") \
+                            or ((self.direction == "Down") and (j.direction == "Up")) \
+                            or ((self.direction == "Left") and (j.direction == "Right")) \
+                            or ((self.direction == "Right") and (j.direction == "Left"))):
+                                return j.direction
+
+            elif(self.model.grid.out_of_bounds(checate[i])):
+                if(i == 1):
+                    self.model.grid.move_agent(self, (checate[3][0], checate[3][1]))
+                    return True
+                elif(i == 3):
+                    self.model.grid.move_agent(self, (checate[1][0], checate[1][1]))
+                    return True
+#################################################################   
     def step(self):
         if not self.arrived:
             self.move()
