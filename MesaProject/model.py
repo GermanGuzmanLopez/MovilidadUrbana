@@ -57,15 +57,23 @@ class RandomModel(mesa.Model):
             for i in range(N):
                 a = Car(i, self, choice(self.destinos))
                 notfound = True
+                prohibido = []
+                prohibido = prohibido + self.grid.get_neighborhood((0, 0), moore=True, include_center= True)
+                prohibido = prohibido + self.grid.get_neighborhood((self.width - 1, 0), moore=True, include_center= True)
+                prohibido = prohibido + self.grid.get_neighborhood((0, self.height - 1), moore=True, include_center= True)
+                prohibido = prohibido + self.grid.get_neighborhood((self.width - 1, self.height - 1), moore=True, include_center= True)
+
                 while notfound:
                     agente = choice(self.Rschedule.agents)
+                    while agente.pos in prohibido:
+                        agente = choice(self.Rschedule.agents)
                     cellmates = self.grid.get_cell_list_contents((agente.pos))
                     
                     for i in cellmates:
                         if i in self.schedule.agents:
                             continue
                         else:
-                            notfound = False
+                            notfound = False 
             
                 self.schedule.add(a)
                 self.grid.place_agent(a, (agente.pos))

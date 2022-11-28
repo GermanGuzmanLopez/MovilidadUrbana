@@ -22,6 +22,7 @@ class Car(Agent):
         self.buffer = []
         self.repetir = []
         self.arrived = False
+        self.Bdirection = ""
         print(self.destino)
 #################################################################
     def closer(self):
@@ -73,7 +74,7 @@ class Car(Agent):
                 return True
         else: return False
 #################################################################
-    def decidir(self):
+    def decidir(self, alli):
         go = True
 
         x = self.pos[0]
@@ -84,11 +85,12 @@ class Car(Agent):
         print("Buffereado del smash: " + str(self.buffer))
 
         if len(self.buffer) > 0:
-            self.direction = self.buffer.pop(0)
+            self.Bdirection = alli
+            alli = self.buffer.pop(0)
 
         print(self.direction)
         
-        if self.direction == "Right":
+        if alli == "Right":
             occupied = self.model.grid.get_cell_list_contents((x + 1, y))
             for j in occupied:
                 if j in self.model.schedule.agents:
@@ -96,6 +98,7 @@ class Car(Agent):
                     break
                 elif j in self.model.Eschedule.agents:
                     self.buffer.clear()
+                    self.decidir(self.Bdirection)
                     go = False
                     
                 elif j in self.model.Tschedule.agents:
@@ -107,7 +110,7 @@ class Car(Agent):
             
             if go: self.model.grid.move_agent(self, (x + 1, y))
                 
-        elif self.direction == "Left":
+        elif alli == "Left":
             occupied = self.model.grid.get_cell_list_contents((x - 1, y))
             for j in occupied:
                 if j in self.model.schedule.agents:
@@ -115,6 +118,7 @@ class Car(Agent):
                     break
                 elif j in self.model.Eschedule.agents:
                     self.buffer.clear()
+                    self.decidir(self.Bdirection)
                     go = False
                     
                 elif j in self.model.Tschedule.agents:
@@ -126,7 +130,7 @@ class Car(Agent):
             if go: self.model.grid.move_agent(self, (x - 1, y))
 
                 
-        elif self.direction == "Up":
+        elif alli == "Up":
             occupied = self.model.grid.get_cell_list_contents((x, y + 1))
             for j in occupied:
                 if j in self.model.schedule.agents:
@@ -134,6 +138,7 @@ class Car(Agent):
                     break
                 elif j in self.model.Eschedule.agents:
                     self.buffer.clear()
+                    self.decidir(self.Bdirection)
                     go = False
                 elif j in self.model.Tschedule.agents:
                     print("Semaforo en: "+ str(j.state))
@@ -144,7 +149,7 @@ class Car(Agent):
             if go: self.model.grid.move_agent(self, (x, y + 1))
 
 
-        elif self.direction == "Down":
+        elif alli == "Down":
             occupied = self.model.grid.get_cell_list_contents((x, y - 1))
             for j in occupied:
                 if j in self.model.schedule.agents:
@@ -152,6 +157,7 @@ class Car(Agent):
                     break
                 elif j in self.model.Eschedule.agents:
                     self.buffer.clear()
+                    self.decidir(self.Bdirection)
                     go = False
                     break
                 elif j in self.model.Tschedule.agents:
@@ -190,9 +196,9 @@ class Car(Agent):
         self.possible_direction = self.get_direction(checate)
 
         if not self.closer():
-            self.decidir()
+            self.decidir(self.direction)
         else:
-            self.decidir()
+            self.decidir(self.direction)
             print(self.closer())
             x = self.pos[0]
             y = self.pos[1]
@@ -260,9 +266,11 @@ class Car(Agent):
                 for j in occupied:
                     if j in self.model.Rschedule.agents:
                         if (i == 1):
-                            directoL = True
+                            # if not (self.direction != j.direction):
+                                directoL = True
                         if (i == 3):
-                            directoR = True
+                            # if not (self.direction != j.direction):
+                                directoR = True
                         if(self.direction != j.direction):
                             if(i == 0) and directoL:
                                 print("Directo Left: " + j.direction)
