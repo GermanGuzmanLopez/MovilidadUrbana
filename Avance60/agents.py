@@ -23,7 +23,7 @@ class Car(Agent):
         self.repetir = []
         self.arrived = False
         print(self.destino)
-
+#################################################################
     def closer(self):
         """"🎶 No juzgue los nombres profe, son las 3 de la mañana (es la 1:30 xd)
          y estoy en tu ventana buscandote amor escucha porfavor 🎶 """
@@ -68,7 +68,7 @@ class Car(Agent):
                 print("------")
                 return True
         else: return False
-
+#################################################################
     def decidir(self):
         x = self.pos[0]
         y = self.pos[1]
@@ -77,6 +77,8 @@ class Car(Agent):
 
         if len(self.buffer) > 0:
             self.direction = self.buffer.pop(0)
+
+        print(self.direction)
         
         if self.direction == "Right":
             occupied = self.model.grid.get_cell_list_contents((x + 1, y))
@@ -85,7 +87,12 @@ class Car(Agent):
                     break
                 elif j in self.model.Eschedule.agents:
                     self.buffer.clear()
-                    self.move()                
+                    self.move() 
+                elif j in self.model.Tschedule.agents:
+                    print("Semaforo en: "+ str(j.state))
+                    if j.state:
+                        self.model.grid.move_agent(self, (x + 1, y))
+                        break                  
                 else:
                     self.model.grid.move_agent(self, (x + 1, y))
                     break
@@ -98,6 +105,11 @@ class Car(Agent):
                 elif j in self.model.Eschedule.agents:
                     self.buffer.clear()
                     self.move()
+                elif j in self.model.Tschedule.agents:
+                    print("Semaforo en: "+ str(j.state))
+                    if j.state:
+                        self.model.grid.move_agent(self, (x - 1, y))
+                        break
                 else:
                     self.model.grid.move_agent(self, (x - 1, y))
                     break
@@ -109,7 +121,12 @@ class Car(Agent):
                     break
                 elif j in self.model.Eschedule.agents:
                     self.buffer.clear()
-                    self.move()                
+                    self.move()   
+                elif j in self.model.Tschedule.agents:
+                    print("Semaforo en: "+ str(j.state))
+                    if j.state:
+                        self.model.grid.move_agent(self, (x, y + 1))  
+                        break   
                 else:
                     self.model.grid.move_agent(self, (x, y + 1))
                     break
@@ -121,13 +138,17 @@ class Car(Agent):
                     break
                 elif j in self.model.Eschedule.agents:
                     self.buffer.clear()
-                    self.move()                
+                    self.move()
+                elif j in self.model.Tschedule.agents:
+                    print("Semaforo en: "+ str(j.state))
+                    if j.state:
+                        self.model.grid.move_agent(self, (x, y - 1))
+                        break
                 else:
                     self.model.grid.move_agent(self, (x, y - 1))
                     break
-
+#################################################################
     def move(self):
-
         possible_steps = self.model.grid.get_neighborhood(
             self.destcalle,
             moore=False,
@@ -168,6 +189,7 @@ class Car(Agent):
                     else:
                         self.buffer.append("Right")
                         break
+
             elif self.possible_direction == "Left":
                 occupied = self.model.grid.get_cell_list_contents((x - 1, y))
                 for j in occupied:
@@ -176,6 +198,7 @@ class Car(Agent):
                     else:
                         self.buffer.append("Left")
                         break
+
             elif self.possible_direction == "Up":
                 occupied = self.model.grid.get_cell_list_contents((x, y + 1))
                 for j in occupied:
@@ -184,6 +207,7 @@ class Car(Agent):
                     else:
                         self.buffer.append("Up")
                         break
+
             elif self.possible_direction == "Down":
                 occupied = self.model.grid.get_cell_list_contents((x, y - 1))
                 for j in occupied:
@@ -192,8 +216,7 @@ class Car(Agent):
                     else:
                         self.buffer.append("Down")
                         break
-        
-
+#################################################################   
     def checate(self, i):
         x = self.pos[0]
         y = self.pos[1]
@@ -208,6 +231,7 @@ class Car(Agent):
             checate = [(x - i, y - i), (x , y - i), (x + i, y - i)]
 
         return checate
+#################################################################
 
     # def get_direction(self, checate):
     #     for i in checate:
@@ -234,7 +258,7 @@ class Car(Agent):
                     self.model.grid.move_agent(self, (checate[2][0], checate[2][1]))
                 elif(i == 2):
                     self.model.grid.move_agent(self, (checate[0][0], checate[0][1]))
-                
+#################################################################             
     def step(self):
         if not self.arrived:
             self.move()
