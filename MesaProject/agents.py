@@ -49,18 +49,22 @@ class Car(Agent):
         else:
             posdirpos = (0,0)
 
-        dirpospos = (self.destcalle[0] - dirpos[0], self.destcalle[1] - dirpos[1])
-        posdirpospos = (self.destcalle[0] - posdirpos[0], self.destcalle[1] - posdirpos[1])
+        dirpospos = (abs(self.destcalle[0] - dirpos[0]), abs(self.destcalle[1] - dirpos[1]))
+        posdirpospos = (abs(self.destcalle[0] - posdirpos[0]), abs(self.destcalle[1] - posdirpos[1]))
         
+
+        print("Suma dirpospos:" + str(sum(list(dirpospos))))
+        print("Suma posdirpospos:" + str(sum(list(posdirpospos))))
+
         if (sum(list(dirpospos)) > sum(list(posdirpospos))):
-            print(sum(list(dirpospos)))
-            print(sum(list(posdirpospos)))
+            
             return True
 
         elif (sum(list(dirpospos)) == sum(list(posdirpospos))):
             if (self.pos in self.repetir):
                 print("Deja Vu")
                 return False
+                
             else:
                 self.repetir.append(self.pos)
                 print("------")
@@ -149,16 +153,18 @@ class Car(Agent):
                 elif j in self.model.Eschedule.agents:
                     self.buffer.clear()
                     go = False
+                    break
                 elif j in self.model.Tschedule.agents:
                     print("Semaforo en: "+ str(j.state))
                     if not j.state:
                         go = False
                         break
-
+            print(go)           
             if go: self.model.grid.move_agent(self, (x, y - 1))
 
 #################################################################
     def move(self):
+        print(self.pos)
         possible_steps = self.model.grid.get_neighborhood(
             self.destcalle,
             moore=False,
@@ -232,24 +238,25 @@ class Car(Agent):
         y = self.pos[1]
         
         if self.direction == "Right":
-            checate = [(x + i, y - 2), (x + i, y - 1), (x + i, y), (x + i, y + 1), (x + i, y + 2)]
+            checate = [(x + i, y + 2), (x + i, y + 1), (x + i, y), (x + i, y - 1), (x + i, y - 2)]
         elif self.direction == "Left":
             checate = [(x - i, y - 2), (x - i, y - 1), (x - i, y), (x - i, y + 1), (x - i, y + 2)]
         elif self.direction == "Up":
             checate = [(x - 2, y + i), (x - 1, y + i), (x, y + i), (x + 1, y + i), (x + 2, y + i)]
         elif self.direction == "Down":
-            checate = [(x - 2, y - i), (x - 1, y - i), (x, y - i), (x + 1, y - i), (x + 2, y - i)]
+            checate = [(x + 2, y - i), (x + 1, y - i), (x, y - i), (x - 1, y - i), (x - 2, y - i)]
 
         return checate
 #################################################################
     def get_direction(self, checate):
         directoL = False
         directoR = False
-        for i in range(len(checate) + 1):
+        for i in range(1, len(checate) + 1):
             if i == len(checate):
                 i = 0
             if(not self.model.grid.out_of_bounds(checate[i])):
                 occupied = self.model.grid.get_cell_list_contents(checate[i])
+                print(i, len(checate) - 1, directoL, directoR)
                 for j in occupied:
                     if j in self.model.Rschedule.agents:
                         if (i == 1):
