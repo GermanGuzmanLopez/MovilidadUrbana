@@ -243,17 +243,27 @@ class Car(Agent):
         return checate
 #################################################################
     def get_direction(self, checate):
-        for i in range(len(checate)):
+        directoL = False
+        directoR = False
+        for i in range(len(checate) + 1):
+            if i == len(checate):
+                i = 0
             if(not self.model.grid.out_of_bounds(checate[i])):
                 occupied = self.model.grid.get_cell_list_contents(checate[i])
                 for j in occupied:
                     if j in self.model.Rschedule.agents:
+                        if (i == 1):
+                            directoL = True
+                        if (i == 3):
+                            directoR = True
                         if(self.direction != j.direction):
-                            if not ((self.direction == "Up") and (j.direction == "Down") \
-                            or ((self.direction == "Down") and (j.direction == "Up")) \
-                            or ((self.direction == "Left") and (j.direction == "Right")) \
-                            or ((self.direction == "Right") and (j.direction == "Left"))):
+                            if(i == 0) and directoL:
+                                print("Directo Left: " + j.direction)
                                 return j.direction
+                            elif(i == len(checate) - 1) and directoR:
+                                print("Directo Right: " + j.direction)
+                                return j.direction
+                                
 
             elif(self.model.grid.out_of_bounds(checate[i])):
                 if(i == 1):
