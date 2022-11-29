@@ -54,8 +54,8 @@ class Car(Agent):
         posdirpospos = (abs(self.destcalle[0] - posdirpos[0]), abs(self.destcalle[1] - posdirpos[1]))
         
 
-        print("Suma dirpospos:" + str(sum(list(dirpospos))))
-        print("Suma posdirpospos:" + str(sum(list(posdirpospos))))
+        #print("Suma dirpospos:" + str(sum(list(dirpospos))))
+        #print("Suma posdirpospos:" + str(sum(list(posdirpospos))))
 
         if (sum(list(dirpospos)) > sum(list(posdirpospos))):
             
@@ -266,18 +266,25 @@ class Car(Agent):
                 for j in occupied:
                     if j in self.model.Rschedule.agents:
                         if (i == 1):
-                            # if not (self.direction != j.direction):
+                             #if not (self.direction != j.direction):
                                 directoL = True
                         if (i == 3):
-                            # if not (self.direction != j.direction):
+                             #if not (self.direction != j.direction):
                                 directoR = True
                         if(self.direction != j.direction):
-                            if(i == 0) and directoL:
+                            if(self.direction == "Left" and j.direction == "Right" or self.direction == "Right" and j.direction == "Left"):
+                                if (i == 0):
+                                    pass
+                                elif (i == len(checate)-1):
+                                    pass
+                            elif(i == 0) and directoL:
                                 print("Directo Left: " + j.direction)
                                 return j.direction
                             elif(i == len(checate) - 1) and directoR:
                                 print("Directo Right: " + j.direction)
                                 return j.direction
+                        
+
                                 
 
             elif(self.model.grid.out_of_bounds(checate[i])):
@@ -297,7 +304,7 @@ class Traffic_Light(Agent):
     def __init__(self, unique_id, model, state = False):
         super().__init__(unique_id, model)
         self.cars = 0
-        self.timer = 3
+        self.timer = 1
 
         self.state = state
 
