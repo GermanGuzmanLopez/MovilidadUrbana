@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3944,6 +3944,58 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9190681272309813207, guid: 09ef8aaf7eb74a847add702e1e143d0a, type: 3}
   m_PrefabInstance: {fileID: 155056818}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &623259108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 623259110}
+  - component: {fileID: 623259109}
+  m_Layer: 0
+  m_Name: Model
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &623259109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623259108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983bc179e80f15347a79dd7b044746e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carPrefab: {fileID: 8839358258826875907, guid: 3f23ff8cf43da4eb4a4a898aa06c0365, type: 3}
+  floor: {fileID: 1457529882}
+  NAgents: 5
+  width: 23
+  height: 24
+  timeToUpdate: 0.1
+  timer: 0
+  dt: 0
+--- !u!4 &623259110
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623259108}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 11.89, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &629392334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9401,7 +9453,7 @@ MonoBehaviour:
   - {fileID: 4368528722854004573, guid: 86083ee00e8754d739c7e1ff0a1cdf52, type: 3}
   - {fileID: 7942832639292164306, guid: ee6c67b3f788243dd964a382943d7e2c, type: 3}
   - {fileID: 5003970423556150146, guid: d293b4e0f52f74644abda15cd1932ed3, type: 3}
-  layout: {fileID: 4900000, guid: 1bd49f2e04cdbec48bb774669bd2140d, type: 3}
+  layout: {fileID: 4900000, guid: 4f7c8d5bf7f109a47bb438b62fb851bd, type: 3}
   roadPrefab: {fileID: 8024436176574239853, guid: 8c204cc8586394b1093d32e1369da40d, type: 3}
   semaphorePrefab: {fileID: 3165562704358957663, guid: cc08ee9a0bc124374a624b1813a81a7a, type: 3}
   fountain: {fileID: 2494504102342915511, guid: 11ecc690aa935465abfb386516a93a55, type: 3}

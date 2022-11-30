@@ -22,7 +22,7 @@ AssetImportWorker1
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-60489
+50118
 Successfully changed project path to: /Users/germanguzman/Documents/GitHub/MovilidadUrbana/MovilidadUrbana
 /Users/germanguzman/Documents/GitHub/MovilidadUrbana/MovilidadUrbana
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -54,13 +54,13 @@ Successfully changed project path to: /Users/germanguzman/Documents/GitHub/Movil
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 80.95 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 147.79 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.12f1 (8af3c3e441b1)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.3.12f1/Unity.app/Contents/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path /Users/germanguzman/Documents/GitHub/MovilidadUrbana/MovilidadUrbana/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
-Color LCD preferred device: AMD Radeon Pro 5300M (high power)
+C27R500 preferred device: AMD Radeon Pro 5300M (high power)
 Metal devices available: 2
 0: AMD Radeon Pro 5300M (high power)
 1: Intel(R) UHD Graphics 630 (low power)
@@ -70,96 +70,96 @@ Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2021.3.12f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2021.3.12f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Applications/Unity/Hub/Editor/2021.3.12f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56780
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56393
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2021.3.12f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: /Applications/Unity/Hub/Editor/2021.3.12f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: /Applications/Unity/Hub/Editor/2021.3.12f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001976 seconds.
+Registered in 0.004941 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 73.84 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 143.82 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.658 seconds
+- Completed reload, in  1.307 seconds
 Domain Reload Profiling:
-	ReloadAssembly (658ms)
-		BeginReloadAssembly (71ms)
+	ReloadAssembly (1308ms)
+		BeginReloadAssembly (205ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (476ms)
-			LoadAssemblies (70ms)
+		EndReloadAssembly (902ms)
+			LoadAssemblies (208ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (113ms)
+			SetupTypeCache (204ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (35ms)
-			SetupLoadedEditorAssemblies (279ms)
+			RebuildScriptCaches (65ms)
+			SetupLoadedEditorAssemblies (538ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (74ms)
-				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (152ms)
-				ProcessInitializeOnLoadMethodAttributes (44ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (144ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (297ms)
+				ProcessInitializeOnLoadMethodAttributes (81ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004603 seconds.
+Registered in 0.012354 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image /Users/germanguzman/Documents/GitHub/MovilidadUrbana/MovilidadUrbana/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image /Users/germanguzman/Documents/GitHub/MovilidadUrbana/MovilidadUrbana/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.73 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.056 seconds
+- Completed reload, in  1.938 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1057ms)
-		BeginReloadAssembly (96ms)
+	ReloadAssembly (1939ms)
+		BeginReloadAssembly (171ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
+			DisableScriptedObjects (11ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (18ms)
-		EndReloadAssembly (846ms)
-			LoadAssemblies (68ms)
+			CreateAndSetChildDomain (29ms)
+		EndReloadAssembly (1562ms)
+			LoadAssemblies (192ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (282ms)
+			SetupTypeCache (532ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (57ms)
-			SetupLoadedEditorAssemblies (392ms)
+			RebuildScriptCaches (101ms)
+			SetupLoadedEditorAssemblies (659ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
+				InitializePlatformSupportModulesInManaged (10ms)
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (75ms)
-				ProcessInitializeOnLoadAttributes (278ms)
-				ProcessInitializeOnLoadMethodAttributes (30ms)
-				AfterProcessingInitializeOnLoad (2ms)
+				BeforeProcessingInitializeOnLoad (126ms)
+				ProcessInitializeOnLoadAttributes (468ms)
+				ProcessInitializeOnLoadMethodAttributes (50ms)
+				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launching external process: /Applications/Unity/Hub/Editor/2021.3.12f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.08 seconds
-Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler after 0.14 seconds
+Refreshing native plugins compatible for Editor in 0.79 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3383 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 25 unused Assets / (40.5 KB). Loaded Objects now: 3842.
-Memory consumption went from 91.6 MB to 91.5 MB.
-Total: 3.759115 ms (FindLiveObjects: 0.282584 ms CreateObjectMapping: 0.225936 ms MarkObjects: 3.157679 ms  DeleteObjects: 0.091586 ms)
+Memory consumption went from 91.6 MB to 91.6 MB.
+Total: 8.180250 ms (FindLiveObjects: 0.462319 ms CreateObjectMapping: 0.500166 ms MarkObjects: 7.077404 ms  DeleteObjects: 0.138793 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -173,64 +173,34 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 33168.095116 seconds.
-  path: Assets/Imported/PolygonMini_CityCharacters/Models
-  artifactKey: Guid(e2b4c6ec91506a4419ec31822f32e953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imported/PolygonMini_CityCharacters/Models using Guid(e2b4c6ec91506a4419ec31822f32e953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e49aefd25d7edf17ecfa688a02de8c3') in 0.010393 seconds 
+  Time since last request: 61086.539684 seconds.
+  path: Assets/Imported/CartoonLowPolyCity/Prefabs/Nature
+  artifactKey: Guid(41575f843c4f42d4a879d6ae85f3a2cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imported/CartoonLowPolyCity/Prefabs/Nature using Guid(41575f843c4f42d4a879d6ae85f3a2cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0246419c4c65e95d3a2ae8b08b1d599') in 0.016485 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 424.922478 seconds.
-  path: Assets/Imported/PolygonMini_CityCharacters/Materials/PolygonMinis_Texture_01_B.mat
-  artifactKey: Guid(6d03e424ee7865446bb330749ad2a78d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imported/PolygonMini_CityCharacters/Materials/PolygonMinis_Texture_01_B.mat using Guid(6d03e424ee7865446bb330749ad2a78d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '365f5aee8762b102cd0c44ae04836456') in 0.366705 seconds 
+  Time since last request: 0.000098 seconds.
+  path: Assets/Imported/CartoonLowPolyCity/Prefabs/Nature/Tree_02.prefab
+  artifactKey: Guid(efd9b08c22b97cd40b047f6ce1167112) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imported/CartoonLowPolyCity/Prefabs/Nature/Tree_02.prefab using Guid(efd9b08c22b97cd40b047f6ce1167112) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3d2396a40e7b7fb07ff2bb691c165d7') in 1.708484 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000099 seconds.
-  path: Assets/Imported/PolygonMini_CityCharacters/Materials/PolygonMinis_Texture_Purple_C.mat
-  artifactKey: Guid(32f6257ecd25e2a4594478af4e36f3fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imported/PolygonMini_CityCharacters/Materials/PolygonMinis_Texture_Purple_C.mat using Guid(32f6257ecd25e2a4594478af4e36f3fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '507d65efc4d5ff8e110c3a92ede2a83e') in 0.021468 seconds 
+  Time since last request: 0.000095 seconds.
+  path: Assets/Imported/CartoonLowPolyCity/Prefabs/Nature/Cloud_03.prefab
+  artifactKey: Guid(2ecff4bb600797d4b8085ed128d2ec6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imported/CartoonLowPolyCity/Prefabs/Nature/Cloud_03.prefab using Guid(2ecff4bb600797d4b8085ed128d2ec6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '826fe11191f049e5b542c33cee463899') in 0.023823 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000048 seconds.
-  path: Assets/Imported/PolygonMini_CityCharacters/Materials/PolygonMinis_Texture_Purple_A.mat
-  artifactKey: Guid(69064f31c3405ba42a284bb36e52ab41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imported/PolygonMini_CityCharacters/Materials/PolygonMinis_Texture_Purple_A.mat using Guid(69064f31c3405ba42a284bb36e52ab41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b60fc7aa5631cd1e9ada962df2697b4') in 0.010971 seconds 
+  Time since last request: 0.000194 seconds.
+  path: Assets/Imported/CartoonLowPolyCity/Prefabs/Nature/Cloud_01.prefab
+  artifactKey: Guid(e1fe59c7a12e1d14982c3bbf8e3e0fd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imported/CartoonLowPolyCity/Prefabs/Nature/Cloud_01.prefab using Guid(e1fe59c7a12e1d14982c3bbf8e3e0fd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df9252db3607c4f97aa7ed708bd64a63') in 0.014589 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000084 seconds.
-  path: Assets/Imported/PolygonMini_CityCharacters/Materials/PolygonMinis_Texture_Green_A.mat
-  artifactKey: Guid(d5532418ec14b52438f143677f9ebbe4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imported/PolygonMini_CityCharacters/Materials/PolygonMinis_Texture_Green_A.mat using Guid(d5532418ec14b52438f143677f9ebbe4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd4aa56a75b4a7519a9343abf00f22aa') in 0.012001 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000065 seconds.
-  path: Assets/Imported/PolygonMini_CityCharacters/Materials/PolygonMinis_Texture_Yellow_C.mat
-  artifactKey: Guid(93dfb6aabc38d994e8fc33ae0767c389) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imported/PolygonMini_CityCharacters/Materials/PolygonMinis_Texture_Yellow_C.mat using Guid(93dfb6aabc38d994e8fc33ae0767c389) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0827d34218ea6bcb13873cb11409e83c') in 0.013225 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000070 seconds.
-  path: Assets/Imported/PolygonMini_CityCharacters/Materials/PolygonMinis_Texture_Blue_B.mat
-  artifactKey: Guid(11d325d033985eb489351b0b68d18423) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imported/PolygonMini_CityCharacters/Materials/PolygonMinis_Texture_Blue_B.mat using Guid(11d325d033985eb489351b0b68d18423) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d7af0cd8bbc11be045f7aa621b0d695') in 0.014359 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000083 seconds.
-  path: Assets/Imported/PolygonMini_CityCharacters/Materials/PolygonMinis_Texture_Yellow_B.mat
-  artifactKey: Guid(6be246d592edcad4eaaf5bf4776e698c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imported/PolygonMini_CityCharacters/Materials/PolygonMinis_Texture_Yellow_B.mat using Guid(6be246d592edcad4eaaf5bf4776e698c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cb99d89340fcf8f12d808a4e0ea5476') in 0.015197 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000112 seconds.
-  path: Assets/Imported/PolygonMini_CityCharacters/Materials/PolygonMinis_Texture_Red_A.mat
-  artifactKey: Guid(be081d40810ee074dbc4c036bf475716) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imported/PolygonMini_CityCharacters/Materials/PolygonMinis_Texture_Red_A.mat using Guid(be081d40810ee074dbc4c036bf475716) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '603748163706c8c0a138edbcfb61c777') in 0.017844 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000087 seconds.
-  path: Assets/Imported/PolygonMini_CityCharacters/Materials/PolygonMinis_Texture_Green_B.mat
-  artifactKey: Guid(9ad4af412f22d564baf3d2fe72cce78a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imported/PolygonMini_CityCharacters/Materials/PolygonMinis_Texture_Green_B.mat using Guid(9ad4af412f22d564baf3d2fe72cce78a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5dc6de73674884d80698f2824385a15') in 0.016817 seconds 
+  Time since last request: 0.000263 seconds.
+  path: Assets/Imported/CartoonLowPolyCity/Prefabs/Nature/Rock_02.prefab
+  artifactKey: Guid(d1244c59ce6bbfa45ac9f685c02a08ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imported/CartoonLowPolyCity/Prefabs/Nature/Rock_02.prefab using Guid(d1244c59ce6bbfa45ac9f685c02a08ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7212677ef5f5560be02f08e5bffae410') in 0.014695 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting

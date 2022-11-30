@@ -201,18 +201,8 @@ class Car(Agent):
         print("Posible dir: " + str(self.pos))
 
         if not self.closer(): 
-            #self.decidir(self.direction)
-            if (self.direction == "Right"):
-                self.model.grid.move_agent(self, (x + 1, y))
-
-            elif (self.direction == "Left"):
-                self.model.grid.move_agent(self, (x - 1, y))
-
-            elif (self.direction == "Up"):
-                self.model.grid.move_agent(self, (x, y + 1))
-                
-            elif (self.direction == "Down"):
-                self.model.grid.move_agent(self, (x, y - 1))
+            self.decidir(self.direction)
+           
         else:
             self.decidir(self.direction) 
             print("Closer:" + str(self.closer()))
