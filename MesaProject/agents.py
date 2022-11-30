@@ -51,11 +51,13 @@ class Car(Agent):
             posdirpos = (0,0)
 
         dirpospos = (abs(self.destcalle[0] - dirpos[0]), abs(self.destcalle[1] - dirpos[1]))
-        posdirpospos = (abs(self.destcalle[0] - posdirpos[0]), abs(self.destcalle[1] - posdirpos[1]))
+        posdirpospos = (abs(self.destcalle[0] - posdirpos[0]), abs(self.destcalle[1] - posdirpos[1])) #A donde te lleva la calle
         
 
-        #print("Suma dirpospos:" + str(sum(list(dirpospos))))
-        #print("Suma posdirpospos:" + str(sum(list(posdirpospos))))
+        print("Suma dirpospos:" + str(list(dirpospos)))
+        print("Suma posdirpospos:" + str(list(posdirpospos)))
+
+
 
         if (sum(list(dirpospos)) > sum(list(posdirpospos))):
             
@@ -65,6 +67,7 @@ class Car(Agent):
             if (self.pos in self.repetir):
                 print("Deja Vu")
                 return False
+            #Ta bien cucho tu Deja vu 
                 
             else:
                 self.repetir.append(self.pos)
@@ -192,14 +195,27 @@ class Car(Agent):
         self.possible_direction = ""
 
         checate = self.checate(1)
+        
 
         self.possible_direction = self.get_direction(checate)
+        print("Posible dir: " + str(self.pos))
 
-        if not self.closer():
-            self.decidir(self.direction)
+        if not self.closer(): 
+            #self.decidir(self.direction)
+            if (self.direction == "Right"):
+                self.model.grid.move_agent(self, (x + 1, y))
+
+            elif (self.direction == "Left"):
+                self.model.grid.move_agent(self, (x - 1, y))
+
+            elif (self.direction == "Up"):
+                self.model.grid.move_agent(self, (x, y + 1))
+                
+            elif (self.direction == "Down"):
+                self.model.grid.move_agent(self, (x, y - 1))
         else:
-            self.decidir(self.direction)
-            print(self.closer())
+            self.decidir(self.direction) 
+            print("Closer:" + str(self.closer()))
             x = self.pos[0]
             y = self.pos[1]
 
@@ -274,8 +290,10 @@ class Car(Agent):
                         if(self.direction != j.direction):
                             if(self.direction == "Left" and j.direction == "Right" or self.direction == "Right" and j.direction == "Left"):
                                 if (i == 0):
+                                    print("pass con i 0")
                                     pass
                                 elif (i == len(checate)-1):
+                                    print("pass con i 1")
                                     pass
                             elif(i == 0) and directoL:
                                 print("Directo Left: " + j.direction)
