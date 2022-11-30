@@ -306,27 +306,132 @@ class Car(Agent):
     def step(self):
         if not self.arrived:
             self.move()
-
+#-----------------------------------------------------------------
 class Traffic_Light(Agent):
-
     def __init__(self, unique_id, model, state = False):
         super().__init__(unique_id, model)
-        self.cars = 0
-        self.timer = 1
-
+        self.first = True
+        self.horizontal = False
+        self.companion = None
+        self.corner = None
         self.state = state
 
-    def check_cars(self):
-        neighbors = self.model.grid.get_neighborhood(
+        self.solo = 0
+        self.conjunto = 0
+        self.timer = 0
+        self.maxtimer = 7
+        self.viendo = ""
+#################################################################   
+    def get_pc(self):
+        possible_steps = self.model.grid.get_neighborhood(
             self.pos,
-            moore=True,
-            include_center = False)
-                     
+            moore=False,
+            include_center=False)
+        
+        for i in possible_steps:
+            occupied = self.model.grid.get_cell_list_contents(i)
+            for j in occupied:
+                
+                if j in self.model.Tschedule.agents:
+                    self.companion = j
+                    self.horizontal = (lambda mypos, partnerpos: 
+                    (mypos == partnerpos+1 or mypos == partnerpos-1))(self.pos[0], j.pos[0])
+                    break
 
+        x = self.pos[0]
+        y = self.pos[1]
+
+        possible_steps = [(x - 1, y + 1),(x - 1, y - 1),(x + 1, y + 1),(x + 1, y - 1)]
+
+        for i in possible_steps:
+            if not self.model.grid.out_of_bounds(i):
+                occupied = self.model.grid.get_cell_list_contents(i)
+                for j in occupied:
+                    if j in self.model.Tschedule.agents:
+                        self.companion.corner = j
+                        self.corner = j
+                        break
+ 
+        self.first = False
+#################################################################   
+    def get_direccion(self):
+        x = self.pos[0]
+        y = self.pos[1]
+
+        if self.horizontal:
+            possible_steps = [(x, y - 1),(x, y +1)]
+            for i in possible_steps:
+                occupied = self.model.grid.get_cell_list_contents(i)
+                for j in occupied:
+                    if j in self.model.Rschedule.agents:
+                        if (j.direction == "Left") or (j.direction == "Right"):
+                            break
+                        else:
+                            return j.direction
+                
+        else:
+            possible_steps = [(x - 1, y), (x + 1, y)]
+            for i in possible_steps:
+                occupied = self.model.grid.get_cell_list_contents(i)
+                for j in occupied:
+                    if j in self.model.Rschedule.agents:
+                        if (j.direction == "Up") or (j.direction == "Down"):
+                            break
+                        else:
+                            return j.direction
+        
+#################################################################   
+    def administrar(self):
+        a,c,k,z = 0,0,0,0
+        
+        x = self.pos[0]
+        y = self.pos[1]
+        if self.viendo == "Left":
+            a = 1
+            z = 1
+        elif self.viendo == "Right":
+            a = -1
+            z = -1
+        elif self.viendo == "Up":
+            c = -1
+            k = -1
+        elif self.viendo == "Down":
+            c = 1
+            k = 1
+        for i in range(3):
+            casilla = (x + a, y + c)
+            occupied = self.model.grid.get_cell_list_contents(casilla)
+            for j in occupied:
+                if j in self.model.schedule.agents:
+                    self.solo += 1
+            a += z
+            c += k
+        
+        self.conjunto = self.solo + self.companion.solo
+        if (self.corner != None) and (self.corner.companion != None):
+            if (self.conjunto > self.corner.conjunto):
+                self.state = True
+                self.companion.state = True
+                self.corner.state = False
+                self.corner.companion.state = False
+            elif(self.conjunto == self.corner.conjunto):
+                pass
+            else:
+                self.state = False
+                self.companion.state = False
+                self.corner.state = True
+                self.corner.companion.state = True
+        
+#################################################################
 
     def step(self):
-        # if self.model.schedule.steps % self.timeToChange == 0:
-        #     self.state = not self.state
+        if self.first:
+            self.get_pc()
+            self.viendo = self.get_direccion()
+        self.administrar()
+        self.solo = 0
+        self.timer += 1
+            
         pass
 
 class Destination(Agent):
