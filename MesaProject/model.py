@@ -42,7 +42,7 @@ class RandomModel(mesa.Model):
                         self.Tschedule.add(agent)
                         self.traffic_lights.append(agent)
 
-                    elif col == "#":
+                    elif col == "#" or col == "G":
                         agent = Obstacle(f"ob_{r*self.width+c}", self)
                         self.Eschedule.add(agent)
                         self.grid.place_agent(agent, (c, self.height - r - 1))
