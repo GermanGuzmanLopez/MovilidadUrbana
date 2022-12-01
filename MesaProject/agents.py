@@ -1,12 +1,14 @@
 from mesa import Agent
 
+
 class Car(Agent):
     def __init__(self, unique_id, model, destiny_id):
         super().__init__(unique_id, model)
         self.direction = ""
         self.possible_direction = ""
         self.destino = destiny_id.pos
-        
+        self.decision = True
+
         possible_steps = model.grid.get_neighborhood(
             self.destino,
             moore=False,
@@ -23,75 +25,78 @@ class Car(Agent):
         self.repetir = []
         self.arrived = False
         self.Bdirection = ""
-        print(self.destino)
+        #print(self.destino)
+        self.prevstep = False
 #################################################################
     def closer(self):
         """"🎶 No juzgue los nombres profe, son las 3 de la mañana (es la 1:30 xd)
          y estoy en tu ventana buscandote amor escucha porfavor 🎶 """
+        x,y = self.pos[0],self.pos[1]
         if self.direction == "Left":
-            dirpos = (self.pos[0] - 1, self.pos[1])
+            dirpos = (x - 1, y)
         elif self.direction == "Right":
-            dirpos = (self.pos[0] + 1, self.pos[1])
+            dirpos = (x + 1,y)
         elif self.direction == "Up":
-            dirpos = (self.pos[0], self.pos[1] + 1)
+            dirpos = (x, y + 1)
         elif self.direction == "Down":
-            dirpos = (self.pos[0], self.pos[1] - 1)
+            dirpos = (x, y - 1)
         else:
             dirpos = (0,0)
 
         if self.possible_direction == "Left":
-            posdirpos = (self.pos[0] - 1, self.pos[1])
+            posdirpos = (x - 1, y)
         elif self.possible_direction == "Down":
-            posdirpos = (self.pos[0], self.pos[1] - 1)
+            posdirpos = (x, y - 1)
         elif self.possible_direction == "Up":
-            posdirpos = (self.pos[0], self.pos[1] + 1)
+            posdirpos = (x, y + 1)
         elif self.possible_direction == "Right":
-            posdirpos = (self.pos[0] + 1, self.pos[1])
+            posdirpos = (x + 1, y)
         else:
             posdirpos = (0,0)
-
+        
+        
+        pospos = (abs(self.destcalle[0] - x), abs(self.destcalle[1] - y))
         dirpospos = (abs(self.destcalle[0] - dirpos[0]), abs(self.destcalle[1] - dirpos[1]))
         posdirpospos = (abs(self.destcalle[0] - posdirpos[0]), abs(self.destcalle[1] - posdirpos[1])) #A donde te lleva la calle
+
+        #print("En camino actual " + str(dirpospos) + " Possible camino " + str(posdirpospos))
+        #print("Movimiento rerctilinio uniforme en un espacio de tiempo anterior al nuestro: " + str(self.prevstep))
         
-
-        print("Suma dirpospos:" + str(list(dirpospos)))
-        print("Suma posdirpospos:" + str(list(posdirpospos)))
-
-
+        if ((sum(list(pospos)) < sum(list(dirpospos))) and (sum(list(pospos)) < sum(list(posdirpospos)))):
+            return False
 
         if (sum(list(dirpospos)) > sum(list(posdirpospos))):
-            
+            self.prevstep = False
             return True
 
         elif (sum(list(dirpospos)) == sum(list(posdirpospos))):
             if (self.pos in self.repetir):
-                print("Deja Vu")
-                return False
-            #Ta bien cucho tu Deja vu 
-                
-            else:
-                self.repetir.append(self.pos)
-                print("------")
-                print("Repetir: " + str(self.pos))
-                print("------")
-                return True
-        else: return False
-#################################################################
-    def decidir(self, alli):
-        go = True
+                i = self.repetir.index(self.pos)
 
+                if self.prevstep:
+                    return self.repetir[i+1]
+
+                self.prevstep = not self.prevstep
+
+                self.repetir[i+1] = not(self.repetir[i+1])
+                return self.repetir[i+1]
+            else:
+                self.prevstep = not self.prevstep
+                self.repetir.append(self.pos)
+                self.repetir.append(True)
+                return True
+        else: 
+            self.prevstep = False
+            return False
+#################################################################
+    def move(self, alli):
+        go = True
         x = self.pos[0]
         y = self.pos[1]
-
-        print(str(x)+ "-" + str(y))
-
-        print("Buffereado del smash: " + str(self.buffer))
 
         if len(self.buffer) > 0:
             self.Bdirection = alli
             alli = self.buffer.pop(0)
-
-        print(self.direction)
         
         if alli == "Right":
             occupied = self.model.grid.get_cell_list_contents((x + 1, y))
@@ -101,16 +106,12 @@ class Car(Agent):
                     break
                 elif j in self.model.Eschedule.agents:
                     self.buffer.clear()
-                    self.decidir(self.Bdirection)
-                    go = False
-                    
+                    self.move(self.Bdirection)
+                    go = False  
                 elif j in self.model.Tschedule.agents:
-                    print("Semaforo en: "+ str(j.state))
                     if not j.state:
                         go = False
-                        break
-                                          
-            
+                        break          
             if go: self.model.grid.move_agent(self, (x + 1, y))
                 
         elif alli == "Left":
@@ -121,17 +122,13 @@ class Car(Agent):
                     break
                 elif j in self.model.Eschedule.agents:
                     self.buffer.clear()
-                    self.decidir(self.Bdirection)
-                    go = False
-                    
+                    self.move(self.Bdirection)
+                    go = False  
                 elif j in self.model.Tschedule.agents:
-                    print("Semaforo en: "+ str(j.state))
                     if not j.state:
                         go = False
-                        break
-            
+                        break    
             if go: self.model.grid.move_agent(self, (x - 1, y))
-
                 
         elif alli == "Up":
             occupied = self.model.grid.get_cell_list_contents((x, y + 1))
@@ -141,16 +138,13 @@ class Car(Agent):
                     break
                 elif j in self.model.Eschedule.agents:
                     self.buffer.clear()
-                    self.decidir(self.Bdirection)
+                    self.move(self.Bdirection)
                     go = False
                 elif j in self.model.Tschedule.agents:
-                    print("Semaforo en: "+ str(j.state))
                     if not j.state:
                         go = False
                         break  
-
             if go: self.model.grid.move_agent(self, (x, y + 1))
-
 
         elif alli == "Down":
             occupied = self.model.grid.get_cell_list_contents((x, y - 1))
@@ -160,20 +154,18 @@ class Car(Agent):
                     break
                 elif j in self.model.Eschedule.agents:
                     self.buffer.clear()
-                    self.decidir(self.Bdirection)
+                    self.move(self.Bdirection)
                     go = False
                     break
                 elif j in self.model.Tschedule.agents:
-                    print("Semaforo en: "+ str(j.state))
                     if not j.state:
                         go = False
                         break
-            print(go)           
             if go: self.model.grid.move_agent(self, (x, y - 1))
 
 #################################################################
-    def move(self):
-        print(self.pos)
+    def decidir(self):
+        #print(self.destino)
         possible_steps = self.model.grid.get_neighborhood(
             self.destcalle,
             moore=False,
@@ -192,20 +184,17 @@ class Car(Agent):
             if i in self.model.Rschedule.agents:
                 self.direction = i.direction
                 break
-        self.possible_direction = ""
-
-        checate = self.checate(1)
         
+        self.possible_direction = ""
+        checate = self.checate(1)
+        self.possible_direction = self.get_direction(checate)        
 
-        self.possible_direction = self.get_direction(checate)
-        print("Posible dir: " + str(self.pos))
-
-        if not self.closer(): 
-            self.decidir(self.direction)
+        if not self.closer():
+            self.prevstep = False
+            self.move(self.direction)
            
         else:
-            self.decidir(self.direction) 
-            print("Closer:" + str(self.closer()))
+            self.move(self.direction) 
             x = self.pos[0]
             y = self.pos[1]
 
@@ -234,6 +223,7 @@ class Car(Agent):
                         break
                     else:
                         self.buffer.append("Up")
+                        self.buffer.append("Up")
                         break
 
             elif self.possible_direction == "Down":
@@ -243,6 +233,7 @@ class Car(Agent):
                         break
                     else:
                         self.buffer.append("Down")
+                        self.buffer.append("Down")
                         break
 #################################################################   
     def checate(self, i):
@@ -250,51 +241,59 @@ class Car(Agent):
         y = self.pos[1]
         
         if self.direction == "Right":
-            checate = [(x + i, y + 2), (x + i, y + 1), (x + i, y), (x + i, y - 1), (x + i, y - 2)]
+            checate = [(x + i, y + 2), (x + i, y + 1), (x + i, y), (x + i, y - 1), (x + i, y - 2), (x,y+1), (x,y-1), (x,y+2), (x,y-2)]
         elif self.direction == "Left":
-            checate = [(x - i, y - 2), (x - i, y - 1), (x - i, y), (x - i, y + 1), (x - i, y + 2)]
+            checate = [(x - i, y - 2), (x - i, y - 1), (x - i, y), (x - i, y + 1), (x - i, y + 2), (x,y+1), (x,y-1), (x,y+2), (x,y-2)]
         elif self.direction == "Up":
-            checate = [(x - 2, y + i), (x - 1, y + i), (x, y + i), (x + 1, y + i), (x + 2, y + i)]
+            checate = [(x - 2, y + i), (x - 1, y + i), (x, y + i), (x + 1, y + i), (x + 2, y + i), (x-1,y),(x+1,y),(x-2,y),(x+2,y)]
         elif self.direction == "Down":
-            checate = [(x + 2, y - i), (x + 1, y - i), (x, y - i), (x - 1, y - i), (x - 2, y - i)]
+            checate = [(x + 2, y - i), (x + 1, y - i), (x, y - i), (x - 1, y - i), (x - 2, y - i), (x-1,y),(x+1,y),(x-2,y),(x+2,y)]
 
         return checate
 #################################################################
     def get_direction(self, checate):
         directoL = False
         directoR = False
+        directol = False
+        director = False    
         for i in range(1, len(checate) + 1):
             if i == len(checate):
                 i = 0
             if(not self.model.grid.out_of_bounds(checate[i])):
                 occupied = self.model.grid.get_cell_list_contents(checate[i])
-                print(i, len(checate) - 1, directoL, directoR)
                 for j in occupied:
                     if j in self.model.Rschedule.agents:
                         if (i == 1):
-                             #if not (self.direction != j.direction):
                                 directoL = True
                         if (i == 3):
-                             #if not (self.direction != j.direction):
                                 directoR = True
+                        if (i == 5):
+                            director = True
+                        if (i == 6):
+                            directol = True
+
+                        
                         if(self.direction != j.direction):
-                            if(self.direction == "Left" and j.direction == "Right" or self.direction == "Right" and j.direction == "Left"):
+                            if(self.direction == "Left" and j.direction == "Right") or (self.direction == "Right" and j.direction == "Left"):
                                 if (i == 0):
-                                    print("pass con i 0")
+                                    #print("pass con i 0")
                                     pass
                                 elif (i == len(checate)-1):
-                                    print("pass con i 1")
+                                    #print("pass con i 1")
                                     pass
                             elif(i == 0) and directoL:
-                                print("Directo Left: " + j.direction)
+                                #print("Directo Left: " + j.direction)
                                 return j.direction
-                            elif(i == len(checate) - 1) and directoR:
-                                print("Directo Right: " + j.direction)
+                            elif (i == 3) and (self.direction == j.direction):
+                                return j.direction
+                            elif(i == 4) and directoR:
+                                #print("Directo Right: " + j.direction)
+                                return j.direction
+                            elif (i == 7) and director:
+                                return j.direction
+                            elif (i == 8) and directol:
                                 return j.direction
                         
-
-                                
-
             elif(self.model.grid.out_of_bounds(checate[i])):
                 if(i == 1):
                     self.model.grid.move_agent(self, (checate[3][0], checate[3][1]))
@@ -305,7 +304,7 @@ class Car(Agent):
 #################################################################   
     def step(self):
         if not self.arrived:
-            self.move()
+            self.decidir()
 #-----------------------------------------------------------------
 class Traffic_Light(Agent):
     def __init__(self, unique_id, model, state = False):
