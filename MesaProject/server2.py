@@ -30,15 +30,13 @@ def initModel():
 @app.route('/getAgents', methods=['GET'])
 def getAgents():
     global trafficModel
-    carPositions = []
+    
     if request.method == 'GET':
-        for (a, x, z) in trafficModel.grid.coord_iter():
-            for germen in a:
-                if isinstance(germen,Car):
-                    carPositions.append({"x": x, "y":0, "z":z})
-
-
+        carPositions = []
+        for i in trafficModel.schedule.agents:
+            carPositions.append({"id": str(i.unique_id), "x": i.pos[0], "y": 0, "z": i.pos[1]})
         return jsonify({'positions':carPositions})
+
 
 @app.route('/update', methods=['GET'])
 def updateModel():

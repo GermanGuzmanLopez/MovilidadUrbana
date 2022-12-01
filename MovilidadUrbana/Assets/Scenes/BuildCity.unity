@@ -3975,10 +3975,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carPrefab: {fileID: 8839358258826875907, guid: 3f23ff8cf43da4eb4a4a898aa06c0365, type: 3}
   floor: {fileID: 1457529882}
-  NAgents: 5
-  width: 23
+  NAgents: 10
+  width: 24
   height: 24
-  timeToUpdate: 0.1
+  timeToUpdate: 0.2
   timer: 0
   dt: 0
 --- !u!4 &623259110
