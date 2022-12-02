@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9448,12 +9448,13 @@ MonoBehaviour:
   - {fileID: 7044459593841451811, guid: 2303ccbf5fc5648468f368faadc53f7d, type: 3}
   - {fileID: 4186738516635478886, guid: f78b05330369f42c699a03bdc8965a13, type: 3}
   - {fileID: 2235627952259458213, guid: 8a2e9810e65564373aa5e626bf6325bb, type: 3}
+  - {fileID: 4279039961533115330, guid: dc6824f8b3fb94f46a1b96578b11eb8b, type: 3}
   parkPrefabs:
   - {fileID: 8642937581549734303, guid: 5e7eddedefa1e4bd3802a571b33dcc01, type: 3}
   - {fileID: 4368528722854004573, guid: 86083ee00e8754d739c7e1ff0a1cdf52, type: 3}
   - {fileID: 7942832639292164306, guid: ee6c67b3f788243dd964a382943d7e2c, type: 3}
   - {fileID: 5003970423556150146, guid: d293b4e0f52f74644abda15cd1932ed3, type: 3}
-  layout: {fileID: 4900000, guid: 4f7c8d5bf7f109a47bb438b62fb851bd, type: 3}
+  layout: {fileID: 4900000, guid: 1bd49f2e04cdbec48bb774669bd2140d, type: 3}
   roadPrefab: {fileID: 8024436176574239853, guid: 8c204cc8586394b1093d32e1369da40d, type: 3}
   semaphorePrefab: {fileID: 3165562704358957663, guid: cc08ee9a0bc124374a624b1813a81a7a, type: 3}
   fountain: {fileID: 2494504102342915511, guid: 11ecc690aa935465abfb386516a93a55, type: 3}

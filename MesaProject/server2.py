@@ -37,7 +37,6 @@ def getAgents():
             carPositions.append({"id": str(i.unique_id), "x": i.pos[0], "y": 0, "z": i.pos[1]})
         return jsonify({'positions':carPositions})
 
-
 @app.route('/update', methods=['GET'])
 def updateModel():
     global currentStep, trafficModel
@@ -48,3 +47,4 @@ def updateModel():
 
 if __name__=='__main__':
     app.run(host="localhost", port=8585, debug=True)
+
