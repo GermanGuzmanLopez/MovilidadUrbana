@@ -11,6 +11,10 @@ Un proyecto de simulación de una ciudad con automoviles y semaforos inteligente
 - [@Yahir](https://github.com/A01745696)
 - [@Alan](https://github.com/AlanSaid1)
 
+## Instalación
+- [Video de instalación](https://youtu.be/l4x3EiYcbBo)
+- [Documento de instalación](https://github.com/GermanGuzmanLopez/MovilidadUrbana/blob/main/Proceso%20de%20instalacio%CC%81n.pdf)
+
 ## Implementaciones futuras
 - Creacion de peatones en MESA
 - Peatones en Unity
