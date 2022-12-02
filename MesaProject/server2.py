@@ -37,6 +37,16 @@ def getAgents():
             carPositions.append({"id": str(i.unique_id), "x": i.pos[0], "y": 0, "z": i.pos[1]})
         return jsonify({'positions':carPositions})
 
+@app.route('/getLights', methods=['GET'])
+def getLights():
+    global trafficModel
+    
+    if request.method == 'GET':
+        lightState = []
+        for i in trafficModel.Tschedule.agents:
+            lightState.append({"id": str(i.unique_id), "x": i.pos[0], "y": 0, "z": i.pos[1], "state":i.state, "needsRotation": i.needsRotation})
+        return jsonify({'positions':lightState})
+
 @app.route('/update', methods=['GET'])
 def updateModel():
     global currentStep, trafficModel

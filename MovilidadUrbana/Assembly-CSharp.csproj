@@ -38,6 +38,8 @@
   <ItemGroup>
      <Compile Include="Assets/Scripts/CityMaker.cs" />
      <Compile Include="Assets/Scripts/AgentController.cs" />
+     <Compile Include="Assets/Scripts/LightBehavior.cs" />
+     <Compile Include="Assets/Imported/ZLowPoly/Script/ArtUtil.cs" />
      <None Include="Assets/Data/town_blocks.txt" />
      <None Include="Assets/Data/2022_base.txt" />
      <None Include="Assets/Data/BaseMap.txt" />

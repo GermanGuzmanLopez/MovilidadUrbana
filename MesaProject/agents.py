@@ -314,6 +314,7 @@ class Traffic_Light(Agent):
         self.companion = None
         self.corner = None
         self.state = state
+        self.needsRotation = False
 
         self.solo = 0
         self.conjunto = 0

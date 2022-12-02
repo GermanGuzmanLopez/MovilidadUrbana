@@ -41,6 +41,8 @@ class RandomModel(mesa.Model):
                         self.grid.place_agent(agent, (c, self.height - r - 1))
                         self.Tschedule.add(agent)
                         self.traffic_lights.append(agent)
+                        if col in ["s"]:
+                            agent.needsRotation = True
 
                     elif col == "#" or col == "G" or col == "F":
                         agent = Obstacle(f"ob_{r*self.width+c}", self)
