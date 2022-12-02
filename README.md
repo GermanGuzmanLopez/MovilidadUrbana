@@ -6,9 +6,9 @@ Un proyecto de simulación de una ciudad con automoviles y semaforos inteligente
 
 ## Desarrolladores 
 - [@Isabelinna](https://github.com/isabelinna)
-- [@Fermi](https://github.com/A01745597)
+- [@Fernando](https://github.com/A01745597)
 - [@GermanGuzmanLopez](https://github.com/GermanGuzmanLopez)
-- [@Yajas](https://github.com/A01745696)
+- [@Yahir](https://github.com/A01745696)
 - [@Alan](https://github.com/AlanSaid1)
 
 ## Implementaciones futuras
